@@ -40,7 +40,7 @@ const patients = [{
             nom: "Sangoku",
             maladie: "404",
             argent: 80,
-            poche: [],
+            poche: ["senzu"],
             etatSante: "malade",
             goTo: function (lieu) {
                 lieu.patients.push(this);
@@ -59,7 +59,7 @@ const patients = [{
             nom: "DarthVader",
             maladie: "azmatique",
             argent: 110,
-            poche: [],
+            poche: ["lightsaber"],
             etatSante: "malade",
             goTo: function (lieu) {
                 lieu.patients.push(this);
@@ -101,23 +101,31 @@ const patients = [{
             const cabinet = {
                 nom: "Cabinet du médecin",
                 patients: [],
+                patientIn: function (patient) {
+                    console.log(`${patient.nom} entre dans le cabinet like a pu$$y`);
+                    patient.etatSante = "traitement";
+                },
                 diagnostique: function (patient) {
                     console.log(`Le médecin diagnostique ${patient.nom} qui souffre de ${patient.maladie}`);
                     patient.traitement = diagnostic[patient.maladie];
                 },
-                patientIn: function (patient) {
-                    console.log(`${patient.nom} entre dans le cabinet`);
-                    patient.etatSante = "traitement";
-                },
                 patientOut: function (patient) {
-                    console.log(`${patient.nom} sort du cabinet like a gangsta`);
+                    console.log(`${patient.nom} sort du cabinet like a gang$ta`);
                     this.patients.splice(this.patients.indexOf(patient), 1);
                 },
                 chat: {
                     race: "sphynx",
                     miauler: function () {
-                        console.log("Miaw miaw n-word");
+                        console.log("Miaw miaw whitos");
+                        //ne voulant pas offenser une quelconque communauté le mot original du meme a été remplacé par "whitos" merci de votre compréhension
                         setInterval(this.miauler, 2000);
+                    },
+                },
+                Dog: {
+                    race: "Doggo",
+                    randomEvent: function () {
+                        console.log("wat the dog doing ?");
+                        setInterval(this.randomEvent, 2000);
                     },
                 },
             };
