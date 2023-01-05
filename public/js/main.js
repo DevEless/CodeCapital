@@ -102,7 +102,8 @@ const patients = [{
                 nom: "Cabinet du médecin",
                 patients: [],
                 patientIn: function (patient) {
-                    console.log(`${patient.nom} entre dans le cabinet like a pu$$y`);
+                    console.log(`${patient.nom} entre dans le cabinet like a cat`);
+                    //ne voulant pas offenser un quelconque "genre" le mot original du meme a été remplacé par "cat" merci de votre compréhension
                     patient.etatSante = "traitement";
                 },
                 diagnostique: function (patient) {
